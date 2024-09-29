@@ -20,7 +20,7 @@ const onBtnClick = () => {
 ```js
 function batchedUpdates(fn, a) {
   var prevExecutionContext = executionContext; // 保存原来的值
-  executionContext |= EventContext;
+  executionContext |= BatchedContext;
   try {
     return fn(a); // 调用我们的合成事件逻辑onBtnClick
   } finally {
